@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.dao.RecruitmentMapper">
+    <insert id="addRecruitment">
+        insert into RECRUITMENT values(RECRUIT_SEQ.nextval,#{dempartment.id},#{jod.id},#{peopleneeded},#{requirement},#{money},#{workplace})
+    </insert>
+    <update id="updateRecruitment">
+        update RECRUITMENT
+        <set>
+            <if test="null!=peopleneeded and''!=peopleneeded">
+                peopleneeded=#{peopleneeded},
+            </if>
+            <if test="null!=requirement and''!=requirement">
+                requirement=#{requirement},
+            </if>
+            <if test="null!=money and''!=money">
+                money=#{money},
+            </if>
+            <if test="null!=workplace and ''!=workplace">
+                workplace=#{workplace}
+            </if>
+        </set>
+        where id=#{id}
+    </update>
+
+    <delete id="deleteRecruitment">
+        DELETE from RECRUITMENT where id=#{id};
+    </delete>
+    <select id="selectRecruitByDJ" resultType="com.model.Recruitment">
+       select * from RECRUITMENT where RM_DID=#{dempartment.id} and RM_JID=#{jod.id}
+    </select>
+    <select id="AllRecruitment" resultType="com.model.Recruitment">
+        SELECT * from RECRUITMENT
+    </select>
+</mapper>

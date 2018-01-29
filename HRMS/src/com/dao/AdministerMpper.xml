@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.dao.AdministerMpper">
+    <insert id="addAdmin">
+        insert into ADMINISTER values(admin_seq.nextval,#{name},#{pass})
+    </insert>
+
+    <select id="selectAdmin" resultType="com.model.Administer">
+        select * from ADMINISTER where A_NAME=#{name} AND A_PASSWORD=#{pass}
+    </select>
+</mapper>

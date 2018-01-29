@@ -3,7 +3,9 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.dao.GuestMapper">
-    <insert id="addEmp"></insert>
+    <insert id="addEmp">
+        insert into GUEST values (GUEST_SEQ,)
+    </insert>
     <select id="AllGuest" resultType="com.model.Guest">
         select * from GUEST
     </select>

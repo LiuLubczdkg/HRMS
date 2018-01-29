@@ -3,7 +3,7 @@ package com.model;
 import java.io.Serializable;
 
 public class Resume implements Serializable{
-    private int id;
+    private int id;//¼òÀú
     private Guest guest;
     private String name;
     private int age;

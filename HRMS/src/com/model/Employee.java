@@ -13,7 +13,6 @@ public class Employee implements Serializable {
     private String marrige;//婚姻状态
     private String address;
     private String hiretime;//入职时间
-    private Company company;//所属公司
     private Dempartment dempartment;//部门
     private Job job;
     private double basicwage;//基本工资
@@ -24,7 +23,7 @@ public class Employee implements Serializable {
     public Employee() {
     }
 
-    public Employee(String name, String pass, String realname, int age, String ethnicity, String phone, String marrige, String address, String hiretime, Company company, Dempartment dempartment, Job job, double basicwage, String workstarttime, String workendtime, int workstatus) {
+    public Employee(String name, String pass, String realname, int age, String ethnicity, String phone, String marrige, String address, String hiretime, Dempartment dempartment, Job job, double basicwage, String workstarttime, String workendtime, int workstatus) {
         this.name = name;
         this.pass = pass;
         this.realname = realname;
@@ -34,7 +33,6 @@ public class Employee implements Serializable {
         this.marrige = marrige;
         this.address = address;
         this.hiretime = hiretime;
-        this.company = company;
         this.dempartment = dempartment;
         this.job = job;
         this.basicwage = basicwage;
@@ -123,13 +121,6 @@ public class Employee implements Serializable {
         this.hiretime = hiretime;
     }
 
-    public Company getCompany() {
-        return company;
-    }
-
-    public void setCompany(Company company) {
-        this.company = company;
-    }
 
     public Dempartment getDempartment() {
         return dempartment;
@@ -192,7 +183,6 @@ public class Employee implements Serializable {
                 ", marrige='" + marrige + '\'' +
                 ", address='" + address + '\'' +
                 ", hiretime='" + hiretime + '\'' +
-                ", company=" + company +
                 ", dempartment=" + dempartment +
                 ", job=" + job +
                 ", basicwage=" + basicwage +

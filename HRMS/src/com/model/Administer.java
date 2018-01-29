@@ -6,15 +6,13 @@ public class Administer implements Serializable {
     private int id;
     private String name;
     private String pass;
-    private Company company;
 
     public Administer() {
     }
 
-    public Administer(String name, String pass, Company company) {
+    public Administer(String name, String pass) {
         this.name = name;
         this.pass = pass;
-        this.company = company;
     }
 
     public int getId() {
@@ -41,13 +39,7 @@ public class Administer implements Serializable {
         this.pass = pass;
     }
 
-    public Company getCompany() {
-        return company;
-    }
 
-    public void setCompany(Company company) {
-        this.company = company;
-    }
 
     @Override
     public String toString() {
@@ -55,7 +47,6 @@ public class Administer implements Serializable {
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", pass='" + pass + '\'' +
-                ", company=" + company +
                 '}';
     }
 }

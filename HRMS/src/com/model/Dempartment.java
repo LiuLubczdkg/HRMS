@@ -5,15 +5,13 @@ import java.io.Serializable;
 public class Dempartment implements Serializable{
     private int id;
     private String name;
-    private Company company;//ËùÊô¹«Ë¾
     private String cratertime;
 
     public Dempartment() {
     }
 
-    public Dempartment(String name, Company company, String cratertime) {
+    public Dempartment(String name,  String cratertime) {
         this.name = name;
-        this.company = company;
         this.cratertime = cratertime;
     }
 
@@ -33,13 +31,6 @@ public class Dempartment implements Serializable{
         this.name = name;
     }
 
-    public Company getCompany() {
-        return company;
-    }
-
-    public void setCompany(Company company) {
-        this.company = company;
-    }
 
     public String getCratertime() {
         return cratertime;
@@ -54,7 +45,6 @@ public class Dempartment implements Serializable{
         return "Dempartment{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
-                ", company=" + company +
                 ", cratertime='" + cratertime + '\'' +
                 '}';
     }

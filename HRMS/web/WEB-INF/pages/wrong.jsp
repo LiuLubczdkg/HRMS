@@ -1,8 +1,8 @@
 <%--
   Created by IntelliJ IDEA.
   User: bendi
-  Date: 2018/1/26
-  Time: 9:49
+  Date: 2018/1/29
+  Time: 16:16
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -16,8 +16,6 @@
     <title></title>
 </head>
 <body>
-<a href="">游客</a>
-<a href="">员工</a>
-<a href="adminlogin">管理</a>
+    操作出错
 </body>
 </html>
