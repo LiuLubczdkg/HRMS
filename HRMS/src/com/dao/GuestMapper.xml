@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dao.GuestMapper">
+    <insert id="addEmp"></insert>
+    <select id="AllGuest" resultType="com.model.Guest">
+        select * from GUEST
+    </select>
+    <select id="selectGuest" resultType="com.model.Guest">
+        select * from GUEST where NAME=#{name} and password=#{password}
+    </select>
+</mapper>
