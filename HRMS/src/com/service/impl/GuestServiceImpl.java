@@ -21,12 +21,17 @@ public class GuestServiceImpl implements GuestService {
     }
 
     @Override
-    public boolean addEmp(Guest guest) {
-        return guestMapper.addEmp(guest);
+    public boolean addGuest(Guest guest) {
+        return guestMapper.addGuest(guest);
     }
 
     @Override
     public Guest selectGuest(Guest guest) {
         return guestMapper.selectGuest(guest);
+    }
+
+    @Override
+    public Guest selectGuestbyname(Guest guest) {
+        return guestMapper.selectGuestbyname(guest);
     }
 }

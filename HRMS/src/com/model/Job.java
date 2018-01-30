@@ -4,14 +4,16 @@ import java.io.Serializable;
 
 public class Job implements Serializable {
     private int id;
-    private String createtime;//职业创建时间
-    private Dempartment dempartment;//所在部门
+    private String createtime;//所在部门
+    private String name;
+    private Dempartment dempartment;//职业创建时间
 
     public Job() {
     }
 
-    public Job(String createtime, Dempartment dempartment) {
+    public Job(String createtime, String name, Dempartment dempartment) {
         this.createtime = createtime;
+        this.name = name;
         this.dempartment = dempartment;
     }
 
@@ -31,6 +33,14 @@ public class Job implements Serializable {
         this.createtime = createtime;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
     public Dempartment getDempartment() {
         return dempartment;
     }
@@ -44,6 +54,7 @@ public class Job implements Serializable {
         return "Job{" +
                 "id=" + id +
                 ", createtime='" + createtime + '\'' +
+                ", name='" + name + '\'' +
                 ", dempartment=" + dempartment +
                 '}';
     }

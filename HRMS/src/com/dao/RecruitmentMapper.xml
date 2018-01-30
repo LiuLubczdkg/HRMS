@@ -20,7 +20,7 @@
                 workplace=#{workplace}
             </if>
         </set>
-        where id=#{id}
+        where RM_ID=#{id}
     </update>
 
     <delete id="deleteRecruitment">

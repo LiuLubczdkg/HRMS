@@ -16,7 +16,7 @@
     <title></title>
 </head>
 <body>
-<a href="">游客</a>
+<a href="guestlogin">游客</a>
 <a href="">员工</a>
 <a href="adminlogin">管理</a>
 </body>

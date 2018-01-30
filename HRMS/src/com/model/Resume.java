@@ -151,7 +151,7 @@ public class Resume implements Serializable{
 
     @Override
     public String toString() {
-        return "Resume{" +
+        return "ResumeMapper{" +
                 "id=" + id +
                 ", guest=" + guest +
                 ", name='" + name + '\'' +

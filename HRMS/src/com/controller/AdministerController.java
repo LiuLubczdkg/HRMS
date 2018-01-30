@@ -17,7 +17,7 @@ public class AdministerController {
 
     @RequestMapping(value="/adminlogin")
     public String Adminlogin(){return "adminlogin";}
-    @RequestMapping(value = "login")
+    @RequestMapping(value = "/login")
     public String Login(Administer administer, HttpServletRequest request, HttpServletResponse response)throws Exception{
         Administer administer1=administerService.selectAdmin(administer);
         if (administer1!=null){

@@ -43,11 +43,11 @@
 <body>
     <form action="adminlogin" method="post">
         <fieldset style="border-color: aqua">
-        <legend>游客登录</legend>
+        <legend>管理员登录</legend>
             账号：<input type="text" name="name" placeholder="请输入用户" id="name"><span id="sp1"></span><br>
             密码:<input type="text" name="pass" placeholder="输入密码" id="pass"><span id="sp2"></span><br>
             <input type="submit" value="登录">
-            <input type=submit value="注册" onclick="this.form.action=''">
+
         </fieldset>
     </form>
 </body>

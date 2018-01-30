@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface GuestMapper {
     List<Guest> AllGuest();
-    boolean addEmp(Guest guest);
+    boolean addGuest(Guest guest);
     Guest selectGuest(Guest guest);
-
+    Guest selectGuestbyname(Guest guest);
 }
