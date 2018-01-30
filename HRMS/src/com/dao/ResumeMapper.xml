@@ -57,4 +57,7 @@
     <select id="MyResume" resultType="com.model.Resume">
         SELECT * from RESUME where R_GID=#{guest.id}
     </select>
+    <resultMap id="getResume" type="com.model.Resume">
+
+    </resultMap>
 </mapper>

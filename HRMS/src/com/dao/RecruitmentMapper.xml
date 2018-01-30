@@ -8,23 +8,23 @@
         update RECRUITMENT
         <set>
             <if test="null!=peopleneeded and''!=peopleneeded">
-                peopleneeded=#{peopleneeded},
+                RM_PEOPLENEEDED=#{peopleneeded},
             </if>
             <if test="null!=requirement and''!=requirement">
-                requirement=#{requirement},
+                RM_REQUIREMENT=#{requirement},
             </if>
             <if test="null!=money and''!=money">
-                money=#{money},
+                RM_MONEY=#{money},
             </if>
             <if test="null!=workplace and ''!=workplace">
-                workplace=#{workplace}
+                RM_WORKPLACE=#{workplace}
             </if>
         </set>
         where RM_ID=#{id}
     </update>
 
     <delete id="deleteRecruitment">
-        DELETE from RECRUITMENT where id=#{id};
+        DELETE from RECRUITMENT where RM_ID=#{id};
     </delete>
     <select id="selectRecruitByDJ" resultType="com.model.Recruitment">
        select * from RECRUITMENT where RM_DID=#{dempartment.id} and RM_JID=#{jod.id}

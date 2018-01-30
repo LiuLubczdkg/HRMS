@@ -23,7 +23,7 @@
                     url:"adminJSAJAX",
                     data:"newsTile="+$("#name").val(),
                     success:function (data) {
-                        $("sp1").html(data);
+                        $("#sp1").html(data);
                     }
                 })
             })
@@ -33,7 +33,7 @@
                     url:"adminJSAJAX",
                     data:"newsTile="+$("#pass").val(),
                     success:function (data) {
-                        $("sp2").html(data);
+                        $("#sp2").html(data);
                     }
                 })
             })

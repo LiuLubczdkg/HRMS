@@ -18,7 +18,12 @@
 <body>
     <form action="addRecruitment" method="post">
         部门:<input name="depa"><br>
-        职位:
+        职位:<input ><br>
+        需要人数:<input name="peopleneeded"><br>
+        职位要求:<input name="requirement"><br>
+        职位工资：<input name="money"><br>
+        地址:<input name="workplace">
+        <input type="submit" value="确认提交">
     </form>
 </body>
 </html>

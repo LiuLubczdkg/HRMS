@@ -9,10 +9,19 @@
     <select id="AllGuest" resultType="com.model.Guest">
         select * from GUEST
     </select>
-    <select id="selectGuest" resultType="com.model.Guest">
-        select * from GUEST where NAME=#{name} and password=#{password}
+
+    <select id="selectGuestbyname" resultMap="getGuest">
+         select * from GUEST where G_NAME=#{name}
     </select>
-    <select id="selectGuestbyname" resultType="com.model.Guest">
-         select * from GUEST where NAME=#{name}
+    <select id="selectGuest" resultMap="getGuest">
+            select * from GUEST where G_NAME=#{name} and G_PASSWORD=#{password}
     </select>
+    <resultMap id="getGuest" type="com.model.Guest">
+            <id property="id" column="G_ID"/>
+            <result property="name" column="G_NAME"/>
+            <result property="password" column="G_PASSWORD"/>
+            <result property="applicationstatus" column="G_APPLICATIONSTATUS"/>
+
+    </resultMap>
+
 </mapper>

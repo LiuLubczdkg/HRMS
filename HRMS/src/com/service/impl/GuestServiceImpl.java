@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 import java.util.List;
-@Service("guest")
+@Service("guestService")
 public class GuestServiceImpl implements GuestService {
     @Resource
     private GuestMapper guestMapper;
@@ -27,7 +27,9 @@ public class GuestServiceImpl implements GuestService {
 
     @Override
     public Guest selectGuest(Guest guest) {
-        return guestMapper.selectGuest(guest);
+        Guest guest1= guestMapper.selectGuest(guest);
+        System.out.println(guest1);
+        return guest1;
     }
 
     @Override

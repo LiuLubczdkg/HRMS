@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 import javax.annotation.Resource;
 import java.util.List;
 
-@Service("resume")
+@Service("resumeService")
 public class ResumeServiceImpl implements ResumeService {
     @Resource
     private ResumeMapper resumeMapper;
