@@ -26,10 +26,19 @@
     <delete id="deleteRecruitment">
         DELETE from RECRUITMENT where RM_ID=#{id};
     </delete>
-    <select id="selectRecruitByDJ" resultType="com.model.Recruitment">
+    <select id="selectRecruitByDJ" resultMap="getRecruitment">
        select * from RECRUITMENT where RM_DID=#{dempartment.id} and RM_JID=#{jod.id}
     </select>
-    <select id="AllRecruitment" resultType="com.model.Recruitment">
+    <select id="AllRecruitment" resultMap="getRecruitment">
         SELECT * from RECRUITMENT
     </select>
+    <resultMap id="getRecruitment" type="com.model.Recruitment">
+        <id property="id" column="RM_ID"/>
+        <result property="dempartment" column="RM_DID"/>
+        <result property="jod" column="RM_JID"/>
+        <result property="peopleneeded" column="RM_PEOPLENEEDED"/>
+        <result property="requirement" column="RM_REQUIREMENT"/>
+        <result property="money" column="RM_MONEY"/>
+        <result property="workplace" column="RM_WOEKPLACE"/>
+    </resultMap>
 </mapper>

@@ -1,10 +1,10 @@
-package com.dao;
+package com.service;
 
 import com.model.Job;
 
 import java.util.List;
 
-public interface JobMapper {
+public interface JobService {
     List<Job> Alljob();
     Job selectJob(Job job);
     boolean addjob(Job job);

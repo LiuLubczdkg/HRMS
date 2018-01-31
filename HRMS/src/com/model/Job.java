@@ -6,12 +6,12 @@ public class Job implements Serializable {
     private int id;
     private String createtime;//所在部门
     private String name;
-    private Dempartment dempartment;//职业创建时间
+    private Department dempartment;//职业创建时间
 
     public Job() {
     }
 
-    public Job(String createtime, String name, Dempartment dempartment) {
+    public Job(String createtime, String name, Department dempartment) {
         this.createtime = createtime;
         this.name = name;
         this.dempartment = dempartment;
@@ -41,11 +41,11 @@ public class Job implements Serializable {
         this.name = name;
     }
 
-    public Dempartment getDempartment() {
+    public Department getDempartment() {
         return dempartment;
     }
 
-    public void setDempartment(Dempartment dempartment) {
+    public void setDempartment(Department dempartment) {
         this.dempartment = dempartment;
     }
 

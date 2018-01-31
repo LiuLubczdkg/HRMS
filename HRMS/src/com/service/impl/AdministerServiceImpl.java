@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 
-@Service("administerService")
+@Service("AdministerService")
 public class AdministerServiceImpl implements AdministerService {
 
     @Resource

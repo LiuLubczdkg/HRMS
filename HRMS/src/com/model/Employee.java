@@ -13,7 +13,7 @@ public class Employee implements Serializable {
     private String marrige;//婚姻状态
     private String address;
     private String hiretime;//入职时间
-    private Dempartment dempartment;//部门
+    private Department dempartment;//部门
     private Job job;
     private double basicwage;//基本工资
     private String workstarttime;//上班时间
@@ -23,7 +23,7 @@ public class Employee implements Serializable {
     public Employee() {
     }
 
-    public Employee(String name, String pass, String realname, int age, String ethnicity, String phone, String marrige, String address, String hiretime, Dempartment dempartment, Job job, double basicwage, String workstarttime, String workendtime, int workstatus) {
+    public Employee(String name, String pass, String realname, int age, String ethnicity, String phone, String marrige, String address, String hiretime, Department dempartment, Job job, double basicwage, String workstarttime, String workendtime, int workstatus) {
         this.name = name;
         this.pass = pass;
         this.realname = realname;
@@ -122,11 +122,11 @@ public class Employee implements Serializable {
     }
 
 
-    public Dempartment getDempartment() {
+    public Department getDempartment() {
         return dempartment;
     }
 
-    public void setDempartment(Dempartment dempartment) {
+    public void setDempartment(Department dempartment) {
         this.dempartment = dempartment;
     }
 

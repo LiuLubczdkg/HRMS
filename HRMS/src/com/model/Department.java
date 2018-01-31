@@ -2,15 +2,15 @@ package com.model;
 
 import java.io.Serializable;
 
-public class Dempartment implements Serializable{
+public class Department implements Serializable{
     private int id;
     private String name;
     private String cratertime;
 
-    public Dempartment() {
+    public Department() {
     }
 
-    public Dempartment(String name,  String cratertime) {
+    public Department(String name, String cratertime) {
         this.name = name;
         this.cratertime = cratertime;
     }
@@ -42,7 +42,7 @@ public class Dempartment implements Serializable{
 
     @Override
     public String toString() {
-        return "Dempartment{" +
+        return "Department{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", cratertime='" + cratertime + '\'' +

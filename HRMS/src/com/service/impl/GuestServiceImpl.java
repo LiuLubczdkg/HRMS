@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 import java.util.List;
-@Service("guestService")
+@Service("GuestService")
 public class GuestServiceImpl implements GuestService {
     @Resource
     private GuestMapper guestMapper;

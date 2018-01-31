@@ -4,7 +4,7 @@ import java.io.Serializable;
 
 public class Recruitment implements Serializable{
     private int id;
-    private Dempartment dempartment;
+    private Department dempartment;
     private String jod;
     private int peopleneeded;//需要人数
     private String requirement;//职位需求
@@ -14,7 +14,7 @@ public class Recruitment implements Serializable{
     public Recruitment() {
     }
 
-    public Recruitment(Dempartment dempartment, String jod, int peopleneeded, String requirement, double money, String workplace) {
+    public Recruitment(Department dempartment, String jod, int peopleneeded, String requirement, double money, String workplace) {
         this.dempartment = dempartment;
         this.jod = jod;
         this.peopleneeded = peopleneeded;
@@ -31,11 +31,11 @@ public class Recruitment implements Serializable{
         this.id = id;
     }
 
-    public Dempartment getDempartment() {
+    public Department getDempartment() {
         return dempartment;
     }
 
-    public void setDempartment(Dempartment dempartment) {
+    public void setDempartment(Department dempartment) {
         this.dempartment = dempartment;
     }
 

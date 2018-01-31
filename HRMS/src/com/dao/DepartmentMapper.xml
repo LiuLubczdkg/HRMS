@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.dao.DepartmentMapper">
+    <insert id="addDepartment">
+        INSERT INTO DEPARTMENT VALUES (DEPA_SEQ.nextval,#{name},#{cratetime})
+    </insert>
+    <update id="updateDepartment">
+        UPDATE  DEPARTMENT set D_NAME =#{name} where D_ID=#{id}
+    </update>
+    <delete id="deleteDepartment">
+        DELETE from DEPARTMENT where D_ID=#{id}
+    </delete>
+    <select id="AllDepartment" resultMap="getDepartment">
+        select * from DEPARTMENT
+    </select>
+    <select id="selectDepartment" resultMap="getDepartment">
+        SELECT * from DEPARTMENT where D_NAME=#{name}
+    </select>
+    <resultMap id="getDepartment" type="com.model.Department">
+        <id property="id" column="D_ID"/>
+        <result property="name" column="D_NAME"/>
+        <result property="cratertime" column="D_CREATETIME"/>
+    </resultMap>
+</mapper>

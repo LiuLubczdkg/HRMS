@@ -51,13 +51,26 @@
     <delete id="deleteResume">
         DELETE from RESUME where R_ID=#{id};
     </delete>
-    <select id="AllResume" resultType="com.model.Resume">
+    <select id="AllResume" resultMap="getResume">
         SELECT * from RESUME
     </select>
-    <select id="MyResume" resultType="com.model.Resume">
+    <select id="MyResume" resultMap="getResume">
         SELECT * from RESUME where R_GID=#{guest.id}
     </select>
     <resultMap id="getResume" type="com.model.Resume">
-
+        <id property="id" column="R_ID"/>
+        <result property="guest" column="R_GID"/>
+        <result property="name" column="R_NAME"/>
+        <result property="age" column="A_AGE"/>
+        <result property="ethnicity" column="R_ETHNICITY"/>
+        <result property="phone" column="R_PHONE"/>
+        <result property="height" column="R_HEIGHT"/>
+        <result property="weight" column="R_WEIGHT"/>
+        <result property="marrige" column="R_MARRIGE"/>
+        <result property="address" column="R_ADDRESS"/>
+        <result property="school" column="R_SCHOOL"/>
+        <result property="selfassessment" column="R_SELFASSESSMENT"/>
+        <result property="intership" column="R_INTERSHIP"/>
+        <result property="award" column="R_AWARD"/>
     </resultMap>
 </mapper>
