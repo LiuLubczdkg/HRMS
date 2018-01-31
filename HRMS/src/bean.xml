@@ -43,7 +43,7 @@
     </aop:config>
     <bean id="administer" class="com.model.Administer"/>
     <bean id="attendance" class="com.model.Attendance"/>
-    <bean id="dempartment" class="com.model.Department"/>
+    <bean id="department" class="com.model.Department"/>
     <bean id="employee" class="com.model.Employee"/>
     <bean id="guest" class="com.model.Guest"/>
     <bean id="interview" class="com.model.Interview"/>

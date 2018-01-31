@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.dao.JobMapper">
     <insert id="addjob">
-        insert INTO JOB VALUES (JOB_SEQ.nextval,#{dempartment.id},#{name},#{createtime})
+        insert INTO JOB VALUES (JOB_SEQ.nextval,#{department.id},#{name},#{createtime})
     </insert>
     <update id="updatejob">
         UPDATE JOB SET J_NAME=#{name} where J_ID=#{id}
@@ -18,8 +18,9 @@
     </select>
     <resultMap id="getJob" type="com.model.Job">
         <id property="id" column="J_ID"/>
-        <result property="dempartment" column="J_DID"/>
+        <result property="department" column="J_DID"/>
+        <result property="name" column="J_NAME"/>
         <result property="createtime" column="J_CREATETIME"/>
-        <result property="createtime" column="J_NAME"/>
+
     </resultMap>
 </mapper>
