@@ -17,11 +17,12 @@ public class Resume implements Serializable{
     private String selfassessment;//自我评价
     private String intership;//实习经历
     private String award;//曾获奖励
+    private Recruitment recruitment;//对应招聘表
 
     public Resume() {
     }
 
-    public Resume(Guest guest, String name, int age, String ethnicity, String phone, String height, String weight, String marrige, String address, String school, String selfassessment, String intership, String award) {
+    public Resume(Guest guest, String name, int age, String ethnicity, String phone, String height, String weight, String marrige, String address, String school, String selfassessment, String intership, String award,Recruitment recruitment) {
         this.guest = guest;
         this.name = name;
         this.age = age;
@@ -35,6 +36,7 @@ public class Resume implements Serializable{
         this.selfassessment = selfassessment;
         this.intership = intership;
         this.award = award;
+        this.recruitment =recruitment;
     }
 
     public int getId() {
@@ -147,6 +149,14 @@ public class Resume implements Serializable{
 
     public void setAward(String award) {
         this.award = award;
+    }
+
+    public Recruitment getRecruitment() {
+        return recruitment;
+    }
+
+    public void setRecruitment(Recruitment recruitment) {
+        this.recruitment = recruitment;
     }
 
     @Override

@@ -3,7 +3,7 @@
 <mapper namespace="com.dao.ResumeMapper">
     <insert id="addResume">
         insert into Resume VALUES (RESUME_SEQ.nextval,#{guest.id},#{name},#{age},#{ethnicity},#{phone},
-        #{height},#{weight},#{marrige},#{address},#{school},#{selfassessment},#{intership},#{award})
+        #{height},#{weight},#{marrige},#{address},#{school},#{selfassessment},#{intership},#{award},#{recruitment})
     </insert>
     <update id="updateResume">
         update RESUME
@@ -45,6 +45,7 @@
                 R_AWARD=#{award}
             </if>
 
+
         </set>
         where R_ID=#{id}
     </update>
@@ -72,5 +73,6 @@
         <result property="selfassessment" column="R_SELFASSESSMENT"/>
         <result property="intership" column="R_INTERSHIP"/>
         <result property="award" column="R_AWARD"/>
+        <result property="recruitment" column="R_REID"/>
     </resultMap>
 </mapper>

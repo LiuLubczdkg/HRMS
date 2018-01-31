@@ -26,17 +26,16 @@ public class GuestController {
     @RequestMapping(value="/guestadd")
     public String Guestadd(){return "addguest";}
     @RequestMapping(value = "glogin")
-    public String GLogin(Guest guest, HttpServletRequest request, HttpServletResponse response)throws Exception{
+    public String GLogin(Guest guest, HttpServletRequest request, HttpServletResponse response,HttpSession session)throws Exception{
         System.out.println(guest);
         Guest guest1=guestService.selectGuest(guest);
         System.out.println(guest1);
-      /*  Resume re = new Resume();
+        Resume re = new Resume();
         re.setGuest(guest1);
-        Resume resume=resumeService.MyResume(re);*/
+        Resume resume=resumeService.MyResume(re);
         if (null!=guest1){
-            HttpSession session=request.getSession();
-            /*session.setAttribute("myres",resume);
-            session.setAttribute("guest",guest1);*/
+            session.setAttribute("myres",resume);
+            session.setAttribute("guest",guest1);
             return "guest";
         }
         return "guestlogin";

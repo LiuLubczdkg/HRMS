@@ -29,6 +29,7 @@
         自我评价:<input name="selfassessment"><br>
         实习经历:<input name="intership"><br>
         曾获奖励:<input name="award"><br>
+        <input type="hidden" value="">;
         <input type="submit" value="提交">
     </form>
 </body>
