@@ -1,4 +1,31 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.dao.InterviewMapper">
+    <insert id="addInter">
+        INSERT into INTERVIEW VALUES (INTER_SEQ.nextval,#{guest},#{interviewtime},#{interviewaddress},#{recruitment},#{gstaus},#{result})
+    </insert>
+    <update id="updateInter">
+        UPDATE INTERVIEW
+        <set>
+        <if test="null!=gstaus and ''!=gstaus">
+            I_GSTATUS=#{gstaus},
+        </if>
+            <if test="null!=result and ''!=result">
+                I_RESULT=#{result}
+            </if>
+    </set>
+      where I_ID=#{id}
+    </update>
+    <select id="selectInter" resultMap="getInterview">
+        SELECT * from INTERVIEW where I_GID=#{guest}
+    </select>
+    <resultMap id="getInterview" type="com.model.Interview">
+        <id property="id" column="I_ID"/>
+        <result property="guest" column="I_GID"/>
+        <result property="interviewtime" column="I_INTERVIEWTIME"/>
+        <result property="interviewaddress" column="I_INTERVIEWaDDRESS"/>
+        <result property="recruitment" column="I_REMID"/>
+        <result property="gstaus" column="I_GSTAUS"/>
+        <result property="result" column="I_RESULT"/>
+    </resultMap>
 </mapper>

@@ -8,18 +8,18 @@ public class Interview implements Serializable{
     private String interviewtime;//面试时间
     private String interviewaddress;//面试地面
     private Recruitment recruitment;
-    private int gastatus;//求职者对面试的回应
+    private int gstaus;//求职者对面试的回应
     private String result;
 
     public Interview() {
     }
 
-    public Interview(Guest guest, String interviewtime, String interviewaddress, Recruitment recruitment, int gastatus, String result) {
+    public Interview(Guest guest, String interviewtime, String interviewaddress, Recruitment recruitment, int gstaus, String result) {
         this.guest = guest;
         this.interviewtime = interviewtime;
         this.interviewaddress = interviewaddress;
         this.recruitment = recruitment;
-        this.gastatus = gastatus;
+        this.gstaus = gstaus;
         this.result = result;
     }
 
@@ -55,12 +55,12 @@ public class Interview implements Serializable{
         this.recruitment = recruitment;
     }
 
-    public int getGastatus() {
-        return gastatus;
+    public int getGstaus() {
+        return gstaus;
     }
 
-    public void setGastatus(int gastatus) {
-        this.gastatus = gastatus;
+    public void setGstaus(int gastatus) {
+        this.gstaus = gstaus;
     }
 
     public String getResult() {
@@ -79,7 +79,7 @@ public class Interview implements Serializable{
                 ", interviewtime='" + interviewtime + '\'' +
                 ", interviewaddress='" + interviewaddress + '\'' +
                 ", recruitment=" + recruitment +
-                ", gastatus=" + gastatus +
+                ", gastatus=" + gstaus +
                 ", result='" + result + '\'' +
                 '}';
     }

@@ -18,31 +18,31 @@
                 R_ETHNICITY=#{ethnicity},
             </if>
             <if test="null!=phone and ''!=phone">
-                R_PHONE=#{phone}
+                R_PHONE=#{phone},
             </if>
             <if test="null!=height and ''!=height">
-                R_HEIGHT=#{height}
+                R_HEIGHT=#{height},
             </if>
             <if test="null!=weight and ''!=weight">
-                R_WEIGHT=#{weight}
+                R_WEIGHT=#{weight},
             </if>
             <if test="null!=marrige and ''!=marrige">
-            R_MARRIGE=#{marrige}
+            R_MARRIGE=#{marrige},
             </if>
             <if test="null!=address and ''!=address">
-                R_ADDRESS=#{address}
+                R_ADDRESS=#{address},
             </if>
             <if test="null!=school and ''!=school">
-                R_SCHOOL=#{school}
+                R_SCHOOL=#{school},
             </if>
             <if test="null!=seifassessment and ''!=seifassessment">
-                R_SEIFASSESSMENT=#{seifassessment}
+                R_SEIFASSESSMENT=#{seifassessment},
             </if>
             <if test="null!=intership and ''!=intership">
-                R_INTERSHIP=#{intership}
+                R_INTERSHIP=#{intership},
             </if>
             <if test="null!=award and ''!=award">
-                R_AWARD=#{award}
+                R_AWARD=#{award},
             </if>
 
 
