@@ -29,4 +29,9 @@ public class InterviewServiceImpl implements InterviewService {
     public boolean updateInter(Interview interview) {
         return interviewMapper.updateInter(interview);
     }
+
+    @Override
+    public boolean deleteInter(Interview interview) {
+        return interviewMapper.deleteInter(interview);
+    }
 }

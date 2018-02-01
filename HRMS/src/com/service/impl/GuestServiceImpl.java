@@ -36,4 +36,9 @@ public class GuestServiceImpl implements GuestService {
     public Guest selectGuestbyname(Guest guest) {
         return guestMapper.selectGuestbyname(guest);
     }
+
+    @Override
+    public boolean updateGuest(Guest guest) {
+        return guestMapper.updateGuest(guest);
+    }
 }

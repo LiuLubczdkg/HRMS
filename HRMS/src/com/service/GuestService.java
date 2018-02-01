@@ -9,4 +9,5 @@ public interface GuestService {
     boolean addGuest(Guest guest);
     Guest selectGuest(Guest guest);
     Guest selectGuestbyname(Guest guest);
+    boolean updateGuest(Guest guest);
 }

@@ -9,6 +9,7 @@ import com.service.ResumeService;
 import com.util.MyUtils;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
@@ -38,13 +39,24 @@ public class GuestController {
             session.setAttribute("guest",guest1);
             return "guest";
         }
-        return "guestlogin";
+        return "guest";
     }
     @RequestMapping(value = "/addguest")
     public String addguest(Guest guest, HttpServletRequest request){
        Guest guest1=guestService.selectGuestbyname(guest);
         if (null!=guest1){
             guestService.addGuest(guest);
+            return "guest";
+        }
+        return "wrong";
+    }
+    @RequestMapping(value = "/updateguest")
+    public String updateguest(@RequestParam(value = "newPass")String newPass, @RequestParam(value = "oldPass")String oldPass, HttpServletRequest request,HttpSession session){
+        Guest guest= (Guest) session.getAttribute("guest");
+        if (guest.getPassword().equals(oldPass)){
+            guest.setPassword(oldPass);
+            guestService.updateGuest(guest);
+
             return "guestlogin";
         }
         return "wrong";

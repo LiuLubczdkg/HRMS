@@ -6,6 +6,9 @@
     <insert id="addGuest">
         insert into GUEST values (GUEST_SEQ.nextval,#{name},#{password},#{applicationstatus})
     </insert>
+    <update id="updateGuest">
+        update GUEST set G_NAME=#{password} where G_ID=#{id}
+    </update>
     <select id="AllGuest" resultType="com.model.Guest">
         select * from GUEST
     </select>
