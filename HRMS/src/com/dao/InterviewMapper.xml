@@ -17,7 +17,7 @@
       where I_ID=#{id}
     </update>
     <delete id="deleteInter">
-        DELETE from INTERVIEW where I_ID=${id}
+        DELETE from INTERVIEW where I_GID=${guest}
     </delete>
 
     <select id="selectInter" resultMap="getInterview">

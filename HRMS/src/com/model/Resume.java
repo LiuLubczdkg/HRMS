@@ -22,7 +22,7 @@ public class Resume implements Serializable{
     public Resume() {
     }
 
-    public Resume(Guest guest, String name, int age, String ethnicity, String phone, String height, String weight, String marrige, String address, String school, String selfassessment, String intership, String award,Recruitment recruitment) {
+    public Resume(Guest guest, String name, int age, String ethnicity, String phone, String height, String weight, String marrige, String address, String school, String selfassessment, String intership, String award, Recruitment recruitment) {
         this.guest = guest;
         this.name = name;
         this.age = age;
@@ -36,7 +36,7 @@ public class Resume implements Serializable{
         this.selfassessment = selfassessment;
         this.intership = intership;
         this.award = award;
-        this.recruitment =recruitment;
+        this.recruitment = recruitment;
     }
 
     public int getId() {
@@ -161,7 +161,7 @@ public class Resume implements Serializable{
 
     @Override
     public String toString() {
-        return "ResumeMapper{" +
+        return "Resume{" +
                 "id=" + id +
                 ", guest=" + guest +
                 ", name='" + name + '\'' +
@@ -176,6 +176,7 @@ public class Resume implements Serializable{
                 ", selfassessment='" + selfassessment + '\'' +
                 ", intership='" + intership + '\'' +
                 ", award='" + award + '\'' +
+                ", recruitment=" + recruitment +
                 '}';
     }
 }

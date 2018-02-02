@@ -19,6 +19,9 @@
     <select id="selectGuest" resultMap="getGuest">
             select * from GUEST where G_NAME=#{name} and G_PASSWORD=#{password}
     </select>
+    <select id="selectGuestById" resultType="com.model.Guest">
+            select * from GUEST where G_ID=#{id}
+    </select>
     <resultMap id="getGuest" type="com.model.Guest">
             <id property="id" column="G_ID"/>
             <result property="name" column="G_NAME"/>

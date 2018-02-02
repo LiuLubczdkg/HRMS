@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.dao.EmployeeMapper">
+    <insert id="addEmp"> insert into EMPLOYEE VALUES (EP_SEQ.nextval,#{name},#{pass},{realname},
+      #{age},#{ethnicity},#{phone},#{marrige},#{address},#{hiretime},#{dempartment},#{job},
+      #{basicwage},#{workstarttime},#{workendtime},#{workstatus})</insert>
+    <update id="updateEmp"></update>
+    <delete id="deleteEmp"></delete>
+    <select id="AllEmp" resultMap="getEmployee">
+        SELECT * FROM EMPLOYEE
+    </select>
+    <select id="selectEmp" resultMap="getEmployee">
+        SELECT * FROM EMPLOYEE
+        <where>
+            <if test="null!=id and ''!=id">
+              E_ID=#{id}
+            </if>
+            <if test="null!=realname and ''!=realname">
+                E_REALNAME like %#{realname}%
+            </if>
+            <if test="null!=dempartment and ''!=dempartment">
+                E_DID=#{dempartment}
+            </if>
+            <if test="null!=job and ''!=name">
+                E_JID=#{job}
+            </if>
+        </where>
+
+    </select>
+    <resultMap id="getEmployee" type="com.model.Employee">
+        <id property="id" column="E_ID"/>
+        <result property="name" column="E_NAME"/>
+        <result property="pass" column="E_PASSWORD"/>
+        <result property="realname" column="E_REALNAME"/>
+        <result property="age" column="E_PHOME"/>
+        <result property="ethnicity" column="E_ETHNICITY"/>
+        <result property="phone" column="E_PHOME"/>
+        <result property="marrige" column="E_MARRIGE"/>
+        <result property="address" column="E_ADDRESS"/>
+        <result property="hiretime" column="E_HIRETIME"/>
+        <result property="dempartment" column="E_DID"/>
+        <result property="job" column="E_JID"/>
+        <result property="basicwage" column="E_BASICWAGE"/>
+        <result property="workstarttime" column="E_WORKSTARTIME"/>
+        <result property="workendtime" column="E_WORKENDTIME"/>
+        <result property="workstatus" column="E_WORKSTATUS"/>
+    </resultMap>
+</mapper>
