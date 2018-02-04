@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.dao.ResumeMapper">
     <insert id="addResume">
-        insert into Resume VALUES (RESUME_SEQ.nextval,#{guest.id},#{name},#{age},#{ethnicity},#{phone},
+        insert into Resume VALUES (RESUME_SEQ.nextval,#{guest.g_id},#{name},#{age},#{ethnicity},#{phone},
         #{height},#{weight},#{marrige},#{address},#{school},#{selfassessment},#{intership},#{award},#{recruitment})
     </insert>
     <update id="updateResume">
@@ -47,20 +47,19 @@
 
 
         </set>
-        where R_ID=#{id}
+        where R_ID=#{r_id}
     </update>
     <delete id="deleteResume">
-        DELETE from RESUME where R_ID=#{id};
+        DELETE from RESUME where R_ID=#{r_id};
     </delete>
     <select id="AllResume" resultMap="getResume">
         SELECT * from RESUME
     </select>
     <select id="MyResume" resultMap="getResume">
-        SELECT * from RESUME where R_GID=#{guest.id}
+        SELECT * from RESUME where R_GID=#{guest.g_id}
     </select>
     <resultMap id="getResume" type="com.model.Resume">
-        <id property="id" column="R_ID"/>
-        <result property="guest" column="R_GID"/>
+        <id property="r_id" column="R_ID"/>
         <result property="name" column="R_NAME"/>
         <result property="age" column="A_AGE"/>
         <result property="ethnicity" column="R_ETHNICITY"/>
@@ -74,5 +73,13 @@
         <result property="intership" column="R_INTERSHIP"/>
         <result property="award" column="R_AWARD"/>
         <result property="recruitment" column="R_REID"/>
+        <association property="guest" javaType="com.model.Guest">
+            <id property="g_id" column="R_GID"/>
+            <result property="name" column="G_NAME"/>
+            <result property="password" column="G_PASSWORD"/>
+        </association>
+        <association property="recruitment" javaType="com.model.Recruitment">
+            <id property="rm_id" column="R_REID"/>
+        </association>
     </resultMap>
 </mapper>

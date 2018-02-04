@@ -5,10 +5,10 @@
         INSERT INTO DEPARTMENT VALUES (DEPA_SEQ.nextval,#{name},#{cratetime})
     </insert>
     <update id="updateDepartment">
-        UPDATE  DEPARTMENT set D_NAME =#{name} where D_ID=#{id}
+        UPDATE  DEPARTMENT set D_NAME =#{name} where D_ID=#{d_id}
     </update>
     <delete id="deleteDepartment">
-        DELETE from DEPARTMENT where D_ID=#{id}
+        DELETE from DEPARTMENT where D_ID=#{d_id}
     </delete>
     <select id="AllDepartment" resultMap="getDepartment">
         select * from DEPARTMENT
@@ -17,7 +17,7 @@
         SELECT * from DEPARTMENT where D_NAME=#{name}
     </select>
     <resultMap id="getDepartment" type="com.model.Department">
-        <id property="id" column="D_ID"/>
+        <id property="d_id" column="D_ID"/>
         <result property="name" column="D_NAME"/>
         <result property="cratertime" column="D_CREATETIME"/>
     </resultMap>

@@ -14,22 +14,29 @@
                 I_RESULT=#{result}
             </if>
     </set>
-      where I_ID=#{id}
+      where I_ID=#{i_id}
     </update>
     <delete id="deleteInter">
-        DELETE from INTERVIEW where I_GID=${guest}
+        DELETE from INTERVIEW where I_GID=${guest.g_id}
     </delete>
 
     <select id="selectInter" resultMap="getInterview">
-        SELECT * from INTERVIEW where I_GID=#{guest}
+        SELECT * from INTERVIEW where I_GID=#{guest.g_id}
     </select>
     <resultMap id="getInterview" type="com.model.Interview">
-        <id property="id" column="I_ID"/>
-        <result property="guest" column="I_GID"/>
+        <id property="i_id" column="I_ID"/>
         <result property="interviewtime" column="I_INTERVIEWTIME"/>
         <result property="interviewaddress" column="I_INTERVIEWaDDRESS"/>
         <result property="recruitment" column="I_REMID"/>
         <result property="gstaus" column="I_GSTAUS"/>
         <result property="result" column="I_RESULT"/>
+        <association property="guest" javaType="com.model.Guest">
+            <id property="g_id" column="G_ID"/>
+            <result property="name" column="G_NAME"/>
+        </association>
+        <association property="recruitment" javaType="com.model.Recruitment">
+            <id property="rm_id" column="RM_ID"/>
+
+        </association>
     </resultMap>
 </mapper>

@@ -3,7 +3,7 @@ package com.model;
 import java.io.Serializable;
 
 public class Reward implements Serializable {
-    private int id;//½±³Í
+    private int re_id;//½±³Í
     private Employee employee;
     private double money;
     private String time;
@@ -19,12 +19,12 @@ public class Reward implements Serializable {
         this.reason = reason;
     }
 
-    public int getId() {
-        return id;
+    public int getRe_id() {
+        return re_id;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setRe_id(int re_id) {
+        this.re_id = re_id;
     }
 
     public Employee getEmployee() {
@@ -62,7 +62,7 @@ public class Reward implements Serializable {
     @Override
     public String toString() {
         return "Reward{" +
-                "id=" + id +
+                "re_id=" + re_id +
                 ", employee=" + employee +
                 ", money=" + money +
                 ", time='" + time + '\'' +

@@ -3,7 +3,7 @@ package com.model;
 import java.io.Serializable;
 
 public class Job implements Serializable {
-    private int id;
+    private int j_id;
     private String createtime;//所在部门
     private String name;
     private Department department;//职业创建时间
@@ -17,12 +17,12 @@ public class Job implements Serializable {
         this.department = department;
     }
 
-    public int getId() {
-        return id;
+    public int getJ_id() {
+        return j_id;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setJ_id(int j_id) {
+        this.j_id = j_id;
     }
 
     public String getCreatetime() {
@@ -52,7 +52,7 @@ public class Job implements Serializable {
     @Override
     public String toString() {
         return "Job{" +
-                "id=" + id +
+                "j_id=" + j_id +
                 ", createtime='" + createtime + '\'' +
                 ", name='" + name + '\'' +
                 ", department=" + department +

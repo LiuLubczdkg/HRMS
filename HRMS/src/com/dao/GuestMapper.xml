@@ -7,7 +7,7 @@
         insert into GUEST values (GUEST_SEQ.nextval,#{name},#{password},#{applicationstatus})
     </insert>
     <update id="updateGuest">
-        update GUEST set G_NAME=#{password} where G_ID=#{id}
+        update GUEST set G_NAME=#{password} where G_ID=#{g_id}
     </update>
     <select id="AllGuest" resultType="com.model.Guest">
         select * from GUEST
@@ -20,10 +20,10 @@
             select * from GUEST where G_NAME=#{name} and G_PASSWORD=#{password}
     </select>
     <select id="selectGuestById" resultType="com.model.Guest">
-            select * from GUEST where G_ID=#{id}
+            select * from GUEST where G_ID=#{g_id}
     </select>
     <resultMap id="getGuest" type="com.model.Guest">
-            <id property="id" column="G_ID"/>
+            <id property="g_id" column="G_ID"/>
             <result property="name" column="G_NAME"/>
             <result property="password" column="G_PASSWORD"/>
             <result property="applicationstatus" column="G_APPLICATIONSTATUS"/>

@@ -3,7 +3,7 @@ package com.model;
 import java.io.Serializable;
 
 public class Resume implements Serializable{
-    private int id;//¼òÀú
+    private int r_id;//¼òÀú
     private Guest guest;
     private String name;
     private int age;
@@ -39,12 +39,12 @@ public class Resume implements Serializable{
         this.recruitment = recruitment;
     }
 
-    public int getId() {
-        return id;
+    public int getR_id() {
+        return r_id;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setR_id(int r_id) {
+        this.r_id = r_id;
     }
 
     public Guest getGuest() {
@@ -162,7 +162,7 @@ public class Resume implements Serializable{
     @Override
     public String toString() {
         return "Resume{" +
-                "id=" + id +
+                "r_id=" + r_id +
                 ", guest=" + guest +
                 ", name='" + name + '\'' +
                 ", age=" + age +

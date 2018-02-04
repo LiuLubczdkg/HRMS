@@ -5,10 +5,10 @@
         insert INTO JOB VALUES (JOB_SEQ.nextval,#{department.id},#{name},#{createtime})
     </insert>
     <update id="updatejob">
-        UPDATE JOB SET J_NAME=#{name} where J_ID=#{id}
+        UPDATE JOB SET J_NAME=#{name} where J_ID=#{j_id}
     </update>
     <delete id="deletejob">
-        DELETE form JOB where J_ID=#{id}
+        DELETE form JOB where J_ID=#{j_id}
     </delete>
     <select id="Alljob" resultMap="getJob">
         SELECT * from JOB
@@ -17,7 +17,7 @@
         SELECT * from where J_NAME=#{name}
     </select>
     <resultMap id="getJob" type="com.model.Job">
-        <id property="id" column="J_ID"/>
+        <id property="j_id" column="J_ID"/>
         <result property="department" column="J_DID"/>
         <result property="name" column="J_NAME"/>
         <result property="createtime" column="J_CREATETIME"/>

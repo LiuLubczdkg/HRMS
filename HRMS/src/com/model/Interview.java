@@ -3,7 +3,7 @@ package com.model;
 import java.io.Serializable;
 
 public class Interview implements Serializable{
-    private int id;
+    private int i_id;
     private Guest guest;
     private String interviewtime;//面试时间
     private String interviewaddress;//面试地面
@@ -21,6 +21,14 @@ public class Interview implements Serializable{
         this.recruitment = recruitment;
         this.gstaus = gstaus;
         this.result = result;
+    }
+
+    public int getI_id() {
+        return i_id;
+    }
+
+    public void setI_id(int i_id) {
+        this.i_id = i_id;
     }
 
     public Guest getGuest() {
@@ -74,7 +82,7 @@ public class Interview implements Serializable{
     @Override
     public String toString() {
         return "Interview{" +
-                "id=" + id +
+                "i_id=" + i_id +
                 ", guest=" + guest +
                 ", interviewtime='" + interviewtime + '\'' +
                 ", interviewaddress='" + interviewaddress + '\'' +

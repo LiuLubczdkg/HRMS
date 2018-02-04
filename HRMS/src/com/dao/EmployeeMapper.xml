@@ -4,8 +4,19 @@
     <insert id="addEmp"> insert into EMPLOYEE VALUES (EP_SEQ.nextval,#{name},#{pass},{realname},
       #{age},#{ethnicity},#{phone},#{marrige},#{address},#{hiretime},#{dempartment},#{job},
       #{basicwage},#{workstarttime},#{workendtime},#{workstatus})</insert>
-    <update id="updateEmp"></update>
-    <delete id="deleteEmp"></delete>
+    <update id="updateEmp">
+        UPDATE  EMPLOYEE
+        <set>
+            <if test="null!=dempartment and ''!=dempartment">
+               E_DID=#{dempartment},
+            </if>
+            <if test="null!=job and ''!=job">
+                E_JID=#{job}
+            </if>
+        </set>
+        WHERE E_ID=#{id}
+    </update>
+    <delete id="deleteEmp">delete from  EMPLOYEE WHERE E_ID=#{id}</delete>
     <select id="AllEmp" resultMap="getEmployee">
         SELECT * FROM EMPLOYEE
     </select>
@@ -18,17 +29,17 @@
             <if test="null!=realname and ''!=realname">
                 E_REALNAME like %#{realname}%
             </if>
-            <if test="null!=dempartment and ''!=dempartment">
-                E_DID=#{dempartment}
+            <if test="null!=dempartment.id and ''!=dempartment.id">
+                E_DID=#{dempartment.id}
             </if>
-            <if test="null!=job and ''!=name">
-                E_JID=#{job}
+            <if test="null!=job.id and ''!=name.id">
+                E_JID=#{job.id}
             </if>
         </where>
 
     </select>
     <resultMap id="getEmployee" type="com.model.Employee">
-        <id property="id" column="E_ID"/>
+        <id property="e_id" column="E_ID"/>
         <result property="name" column="E_NAME"/>
         <result property="pass" column="E_PASSWORD"/>
         <result property="realname" column="E_REALNAME"/>
@@ -38,11 +49,14 @@
         <result property="marrige" column="E_MARRIGE"/>
         <result property="address" column="E_ADDRESS"/>
         <result property="hiretime" column="E_HIRETIME"/>
-        <result property="dempartment" column="E_DID"/>
         <result property="job" column="E_JID"/>
         <result property="basicwage" column="E_BASICWAGE"/>
         <result property="workstarttime" column="E_WORKSTARTIME"/>
         <result property="workendtime" column="E_WORKENDTIME"/>
         <result property="workstatus" column="E_WORKSTATUS"/>
+        <association property="dempartment" column="com.model.Department">
+            <id property="dempartment" column="E_DID"/>
+
+        </association>
     </resultMap>
 </mapper>

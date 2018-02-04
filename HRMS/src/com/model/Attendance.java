@@ -3,7 +3,7 @@ package com.model;
 import java.io.Serializable;
 
 public class Attendance implements Serializable {
-    private int id;
+    private int at_id;
     private Employee employee;
     private String startime;//上班打卡时间
     private String endtime;//下班打卡时间
@@ -19,12 +19,12 @@ public class Attendance implements Serializable {
         this.checkresult = checkresult;
     }
 
-    public int getId() {
-        return id;
+    public int getAt_id() {
+        return at_id;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setAt_id(int at_id) {
+        this.at_id = at_id;
     }
 
     public Employee getEmployee() {
@@ -62,7 +62,7 @@ public class Attendance implements Serializable {
     @Override
     public String toString() {
         return "Attendance{" +
-                "id=" + id +
+                "at_id=" + at_id +
                 ", employee=" + employee +
                 ", startime='" + startime + '\'' +
                 ", endtime='" + endtime + '\'' +

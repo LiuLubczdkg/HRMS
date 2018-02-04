@@ -3,7 +3,7 @@ package com.model;
 import java.io.Serializable;
 
 public class Administer implements Serializable {
-    private int id;
+    private int a_id;
     private String name;
     private String pass;
 
@@ -15,12 +15,12 @@ public class Administer implements Serializable {
         this.pass = pass;
     }
 
-    public int getId() {
-        return id;
+    public int getA_id() {
+        return a_id;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setA_id(int a_id) {
+        this.a_id = a_id;
     }
 
     public String getName() {
@@ -44,7 +44,7 @@ public class Administer implements Serializable {
     @Override
     public String toString() {
         return "Administer{" +
-                "id=" + id +
+                "a_id=" + a_id +
                 ", name='" + name + '\'' +
                 ", pass='" + pass + '\'' +
                 '}';

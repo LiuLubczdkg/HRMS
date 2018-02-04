@@ -3,7 +3,7 @@ package com.model;
 import java.io.Serializable;
 
 public class Guest implements Serializable{
-    private int id;
+    private int g_id;
     private String name;
     private String password;
     private int applicationstatus;
@@ -17,12 +17,12 @@ public class Guest implements Serializable{
         this.applicationstatus = applicationstatus;
     }
 
-    public int getId() {
-        return id;
+    public int getG_id() {
+        return g_id;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setG_id(int g_id) {
+        this.g_id = g_id;
     }
 
     public String getName() {
@@ -52,7 +52,7 @@ public class Guest implements Serializable{
     @Override
     public String toString() {
         return "Guest{" +
-                "id=" + id +
+                "g_id=" + g_id +
                 ", name='" + name + '\'' +
                 ", password='" + password + '\'' +
                 ", applicationstatus=" + applicationstatus +

@@ -3,7 +3,7 @@ package com.model;
 import java.io.Serializable;
 
 public class Salary implements Serializable{
-    private int id;
+    private int s_id;
     private Employee employee;
     private double bonus;//奖金
     private String date;//薪资对应时间
@@ -19,12 +19,12 @@ public class Salary implements Serializable{
         this.status = status;
     }
 
-    public int getId() {
-        return id;
+    public int getS_id() {
+        return s_id;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setS_id(int s_id) {
+        this.s_id = s_id;
     }
 
     public Employee getEmployee() {
@@ -62,7 +62,7 @@ public class Salary implements Serializable{
     @Override
     public String toString() {
         return "Salary{" +
-                "id=" + id +
+                "s_id=" + s_id +
                 ", employee=" + employee +
                 ", bonus=" + bonus +
                 ", date='" + date + '\'' +

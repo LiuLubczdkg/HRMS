@@ -3,7 +3,7 @@ package com.model;
 import java.io.Serializable;
 
 public class Department implements Serializable{
-    private int id;
+    private int d_id;
     private String name;
     private String cratertime;
 
@@ -15,12 +15,12 @@ public class Department implements Serializable{
         this.cratertime = cratertime;
     }
 
-    public int getId() {
-        return id;
+    public int getD_id() {
+        return d_id;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setD_id(int d_id) {
+        this.d_id = d_id;
     }
 
     public String getName() {
@@ -43,7 +43,7 @@ public class Department implements Serializable{
     @Override
     public String toString() {
         return "Department{" +
-                "id=" + id +
+                "d_id=" + d_id +
                 ", name='" + name + '\'' +
                 ", cratertime='" + cratertime + '\'' +
                 '}';

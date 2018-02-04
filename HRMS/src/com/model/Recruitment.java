@@ -3,7 +3,7 @@ package com.model;
 import java.io.Serializable;
 
 public class Recruitment implements Serializable{
-    private int id;
+    private int rm_id;
     private Department dempartment;
     private String jod;
     private int peopleneeded;//需要人数
@@ -23,12 +23,12 @@ public class Recruitment implements Serializable{
         this.workplace = workplace;
     }
 
-    public int getId() {
-        return id;
+    public int getRm_id() {
+        return rm_id;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setRm_id(int rm_id) {
+        this.rm_id = rm_id;
     }
 
     public Department getDempartment() {
@@ -83,7 +83,7 @@ public class Recruitment implements Serializable{
     @Override
     public String toString() {
         return "Recruitment{" +
-                "id=" + id +
+                "rm_id=" + rm_id +
                 ", dempartment=" + dempartment +
                 ", jod='" + jod + '\'' +
                 ", peopleneeded=" + peopleneeded +
